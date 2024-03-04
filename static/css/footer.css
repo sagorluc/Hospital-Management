@@ -1,0 +1,26 @@
+/* Footer  */
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+ul li {
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-icon {
+    text-decoration: none;
+}
+
+.footer-list li a{
+    list-style: none;
+    color: white;
+    
+}
+
+.footer-list a:hover{
+    text-decoration: none;
+}

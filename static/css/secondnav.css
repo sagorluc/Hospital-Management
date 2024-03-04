@@ -1,0 +1,69 @@
+.main-navbar {
+    background: #0D1128;
+    /* width: 100%; */   
+}
+
+.logo-details {
+    width: 100px;
+}
+
+#dropdown-details {
+    background-color: #0D1128;
+    opacity: .5;
+}
+
+#dropdown-details .dropdown-item {
+    color: white;
+}
+
+#dropdown-details .dropdown-item:hover {
+    color: #17254E;
+}
+
+#dropdown-details1 {
+    background-color: #0D1128;
+    opacity: .5;
+}
+
+#dropdown-details1 .dropdown-item {
+    color: white;
+}
+
+#dropdown-details1 .dropdown-item:hover {
+    color: #17254E;
+}
+
+.donate {
+    opacity: 1;
+
+}
+
+.donate:hover {
+    background-color: white;
+}
+
+.donate img {
+    width: 17px;
+    margin-right: 5px;
+}
+
+.user-icon {
+    width: 17px;
+    margin-right: 5px;
+}
+
+.Login-donate {
+    color: #17254E;
+    font-weight: 500;
+
+}
+
+.btn-donate {
+    border-radius: 20px;
+
+}
+
+.btn-donate:hover {
+    color: #17254E;
+}
+

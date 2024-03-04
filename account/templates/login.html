@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>     
+      <div style="width: 30%; margin: auto; margin-bottom: 100px;">
+        <h1 id="moving-title" class="text-center" style="margin-top: 20px; font-size: 40px">Sign In</h1>
+        <br><br>
+
+        <div style="width: 50%; margin: auto;">
+          {% if messages %}
+          <div class="messages">
+              {% for message in messages %}
+              <div class="alert {% if message.tags == 'error' %}error{% endif %}">
+                  {{ message }}
+              </div>
+              {% endfor %}
+          </div>
+          {% endif %}
+        </div><br><br>
+
+        <form method="POST" action="#">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="email" class="form-label">Username</label>
+              <input type="text" class="form-control" id="email" name="username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div> 
+            {% comment %} {{form|crispy}} {% endcomment %}
+            <input type="checkbox" name="password" id="showPasswordCheckbox" onclick="showPassword()"> Show password <br><br>
+            <button type="submit" class="btn btn-primary">Login</button> <br><br>
+            {% comment %} <a style="text-decoration: None;" href="{% url 'register' %}">Don't have an account? click here</a><br>
+            <a style="text-decoration: None;" href="#">Forgot Password? click here</a> {% endcomment %}
+          </form> 
+      </div>
+
+  <script>
+      function showPassword() {
+        var passwordField = document.getElementById('password');
+        var showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
+    
+        if (showPasswordCheckbox.checked) {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
+        }
+    }
+  </script>
+
+  {% comment %} <script src="{% static "js/show_password.js" %}"></script> {% endcomment %}
+
+</body>
+</html>

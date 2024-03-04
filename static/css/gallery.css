@@ -1,0 +1,80 @@
+.photo-gallery {
+  color: #313437;
+  background-color: #FAFAFA;
+  padding: 10px 0;
+}
+
+.photo-gallery p {
+  color: #7d8285;
+}
+
+.photo-gallery h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
+}
+
+
+
+@media (max-width:767px) {
+  .photo-gallery h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+
+.photo-gallery .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.photo-gallery .intro p {
+  margin-bottom: 0;
+}
+
+.photo-gallery .photos {
+  padding-bottom: 20px;
+}
+
+.photo-gallery .item {
+  padding-bottom: 30px;
+}
+
+.title {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  background-color: #282875a9;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.camera-details {
+  width: 100px;
+}
+
+@media (max-width: 576px) {
+
+  .gallery-title h1 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .gallery-title p {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .camera-details {
+    width: 70px;
+  }
+}

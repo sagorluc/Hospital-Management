@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+</head>
+<body>
+    <div style="width:50%; margin:auto;">
+        
+        <div style="width: 53%; margin: auto;">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div class="alert {% if message.tags == 'error' %}error{% endif %}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+          </div><br><br>
+
+        <form action="#" method="POST", enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            {% comment %} <label for="">Profile Picture</label>
+            <input type="file" name="image" id="" multiple><br>
+
+            <label for="">Additional Address</label>
+            <input type="text" name="add_address" id=""><br>
+
+            <label for="">Registration Number</label>
+            <input type="text" name="regis_number" id=""><br>
+
+            <label for="">Work Place</label>
+            <input type="text" name="work_place" id=""><br>
+
+            <label for="">Department</label>
+            <input type="text" name="department" id=""><br>
+
+            <label for="">Address</label>
+            <input type="text" name="address" id=""><br><br> {% endcomment %}
+            {{form.as_p}}
+            {{form1.as_p}}
+            <input type="submit" value="Save">
+            <button><a style="text-decoration: none;" href="{% url "dashboard" %}">Back</a></button>
+        </form>
+        
+    </div>
+</body>
+</html>

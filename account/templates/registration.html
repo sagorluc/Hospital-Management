@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test form</title>
+</head>
+<body>
+    
+    <div style="width:50%; margin:auto; margin-top: 50px;">
+        <h1>Registration page</h1><br><br>
+
+        <br>
+        <div>
+          {% if messages %}
+          <div class="messages">
+              {% for message in messages %}
+              <div class="alert {% if message.tags == 'error' %}error{% endif %}">
+                  {{ message }}
+              </div>
+              {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <label for="">Username</label>
+            <input type="text" name="username" id=""><br><br>
+    
+            <label for="">Frist name</label>
+            <input type="text" name="frist_name" id=""><br><br>
+    
+            <label for="">Last name</label>
+            <input type="text" name="last_name" id=""><br><br>
+    
+            <label for="">Email</label>
+            <input type="email" name="email" id=""><br><br>
+    
+            <label for="">Phone</label>
+            <input type="text" name="phone" id=""><br><br>
+    
+            <label for="">Address</label>
+            <input type="text" name="address" id=""><br><br>
+    
+            <label for="">Role</label>
+            <input type="text" name="role" id=""><br><br>
+    
+            <label for="">Password</label>
+            <input type="password" name="password" id=""><br>
+
+            <input class="btn btn-primary" type="submit" value="Register">
+    
+            {% comment %} <label for="">Change init pass</label>
+            <input type="checkbox" name="has_change_init_pass" id=""> {% endcomment %}
+            
+        </form>
+        {% else %}
+        <h1 style="color:red;">Not allowed for normal user</h1>
+    {% endif %}
+    </div>
+</body>
+</html>

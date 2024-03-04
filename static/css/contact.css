@@ -1,0 +1,33 @@
+.map-container-2{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container-2 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+
+  .map-responsive iframe{
+    width: 600px;
+    height: 465px;
+    margin: auto;
+  }
+
+ 
+  @media (max-width: 576px) {
+
+    .map-responsive iframe{
+        width: 350px;
+        height: 250px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+}

@@ -1,0 +1,33 @@
+
+{% autoescape off%}
+
+    <div class='container' style="width:50%; margin:auto; margin-top: 20px; margin-bottom: 10px;">
+        <h3 style="color:green;">Welcome, <br> Registration successfull.</h3>
+        <table class="table">
+        <tbody>
+            <tr>
+                <th scope="row">User ID:</th>
+                <td>{{user_id}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Username:</th>
+                <td><strong>{{user}}</strong></td>
+            </tr>
+            <tr>
+                <th scope="row">Email:</th>
+                <td><strong style="color:blue;">{{email}}</strong></td>
+            </tr>
+            <tr>
+                <th scope="row">Password: </th>
+                <td><strong style="color:blue;">{{password}}</strong></td>
+            </tr><br>
+        </tbody>
+    </table><br><br>
+
+    <span><b>Please click in the link below to activate your account!</b></span><br><br>
+    http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+    {% comment %} <a class="btn btn-primary" target="blank" href="{% url 'activate' uidb64=uid token=token %}">Active</a> {% endcomment %}
+
+    </div>
+
+{% endautoescape %}

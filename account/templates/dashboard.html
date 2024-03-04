@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div style="width:50%; margin:auto;">
+        <h1>Welcome to dashboard</h1><br><br>
+    
+        <div style="width: 53%; margin: auto;">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div class="alert {% if message.tags == 'error' %}error{% endif %}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+          </div><br><br>
+    
+        <form action="{% url "logout" %}" method="POST">
+            {% csrf_token %}
+    
+            <input type="submit" value="Logout">
+        </form><br>
+        <button><a style="text-decoration:None;" href="{% url "register" %}">Registration</a></button>
+        <button><a style="text-decoration:None;" href="{% url "reset_password" id=request.user.id%}">Reset Password</a></button>
+        <button><a style="text-decoration:None;" href="{% url "profile"%}">Profile</a></button>
+        {% comment %} <button><a style="text-decoration:None;" href="{% url "update_profile"%}">Profile Update</a></button> {% endcomment %}
+    </div>
+</body>
+</html>
