@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deactivate account</title>
+</head>
+<body>
+    <div style="width:50%; margin:auto;">
+        <!-- Messages -->
+        <br>
+        <div style="width: 23%; margin: auto;">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div class="alert {% if message.tags == 'error' %}error{% endif %}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        
+        <h3>Delete account</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="">Email</label><br>
+            <input type="email" name="email" placeholder="{{request.user.email}}"><br>
+            <span style="color:red;">Please type <strong style="color:black">"{{request.user.email}}"</strong> this email for delete account.</span><br><br>
+    
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a style="text-decoration:none;" href="{% url "show_profile" %}" class="btn btn-primary">Back</a>
+        </form>
+    </div>
+</body>
+</html>

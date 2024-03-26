@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static "./css/dashboardcss/bootstrap.min.css" %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static "./css/dashboardcss/dataTables.bootstrap5.min.css" %}" />
+    <link rel="stylesheet" href="{% static "./css/dashboardcss/style.css" %}" />
+    <link rel="stylesheet" href="{% static "./css/message_style.css" %}" />
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-details navbar-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+            </button>
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold fs-5" href="./dashboard.html">
+                Platform
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+                aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <form class="d-flex ms-auto my-3 my-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="{% url "home" %}">Home</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url "show_profile" %}">Profile</a>
+                            </li>
+
+                            <!--
+                            <li>
+                                <a class="dropdown-item" href="#">Account</a>
+                            </li>
+                            -->
+                    
+                            <li>
+                                <a class="dropdown-item" href="{% url "register" %}">Registration</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="{% url "reset_password"%}">Reset password</a>
+                            </li>
+
+                                <a class="dropdown-item" href="{% url "logout" %}">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- top navigation bar -->
+
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-nav  navbar-details" tabindex="-1" id="sidebar">
+        <div class="offcanvas-body p-0">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">
+                            CORE
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./dashboard.html" class="nav-link px-3 active">
+                            <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                            Interface
+                        </div>
+                    </li>
+
+                    <!-- News  -->
+
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts">
+                            <span class="me-2"><i class="bi bi-newspaper"></i></span>
+                            <span>News</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./desk-report.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-card-text"></i>
+                                        </span>
+                                        <span>Desk Report</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./literature.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-book"></i>
+                                        </span>
+                                        <span>Literature</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./co-curricular.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                                        <span>Co-curricular</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./campus.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-textarea"></i></span>
+                                        <span>Campus</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./conference.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-people-fill"></i>
+                                        </span>
+                                        <span>Conference</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./mourn.html" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-emoji-frown-fill"></i></span>
+                                        <span>Mourn</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./all.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-check-all"></i>
+                                        </span>
+                                        <span>All</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="./doctors-directory.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book"></i></span>
+                            <span>Doctor's Directory</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./magazines.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Magazines</span>
+                        </a>
+                    </li>
+
+                    <!-- Resources -->
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts1">
+                            <span class="me-2"><i class="bi bi-files"></i></span>
+                            <span>Resources</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </span>
+                        </a>
+                        <div class="collapse" id="layouts1">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./pdf-book.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-filetype-pdf"></i>
+                                        </span>
+                                        <span>PDF Book</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts1">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./videos.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-camera-video-fill"></i>
+                                        </span>
+                                        <span>Videos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts1">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./guidelines.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-map"></i>
+                                        </span>
+                                        <span>Guidelines</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="layouts1">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="./webinars.html" class="nav-link px-3">
+                                        <span class="me-2">
+                                            <i class="bi bi-people-fill"></i>
+                                        </span>
+                                        <span>Webinars</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <a href="./jobs.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-bullseye"></i></span>
+                            <span>Jobs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./higher-study.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-mortarboard-fill"></i></span>
+                            <span>Higher Study</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./cme.html" class="nav-link px-3">
+                            <span class="me-2">
+                                <i class="bi bi-journal-album"></i>
+                            </span>
+                            <span>CME</span>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                            Addons
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./gallery-media.html" class="nav-link px-3">
+                            <span class="me-2">
+                                <i class="bi bi-journal-album"></i>
+                            </span>
+                            <span> Gallery/Media</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./upcoming-events.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-calendar-date-fill"></i></span>
+                            <span>Upcoming Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./quack-hunt.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-x-octagon-fill"></i></span>
+                            <span>Quack Hunt</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog.html" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-journals"></i></span>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    {% block body %} {% endblock body %}
+
+    <script src="{% static "./js/dashboardjs/bootstrap.bundle.min.js" %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="{% static "./js/dashboardjs/jquery-3.5.1.js" %}"></script>
+    <script src="{% static "./js/dashboardjs/jquery.dataTables.min.js" %}"></script>
+    <script src="{% static "./js/dashboardjs/dataTables.bootstrap5.min.js" %}"></script>
+    <script src="{% static "./js/dashboardjs/script.js" %}"></script>
+    <script src="{% static "./js/message_alert.js" %}"></script>
+</body>
+
+</html>

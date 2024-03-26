@@ -4,22 +4,17 @@ from account.manager import CustomUserManager
 from account.constants import CHOICES
 
 # Create your models here
-# ================================= Custom User =======================================
-class UserPassword(models.Model):
-    username     = models.CharField(max_length=150)
-    see_password = models.CharField(max_length=8)
-    user_id      = models.IntegerField()
-    
-    
+# ================================= Custom User =======================================   
 class CustomUser(AbstractBaseUser):   
-    username   = models.CharField(max_length=150, null=False, unique=True)
+    username   = models.CharField(max_length=150, null=True, unique=True)
     frist_name = models.CharField(max_length=150, null=True)
     last_name  = models.CharField(max_length=150, null=True)
-    email      = models.EmailField(max_length=50, null=False)
-    phone      = models.CharField(max_length=14,  null=False)
-    address    = models.CharField(max_length=200, null=True)
+    email      = models.EmailField(max_length=50, null=True)
+    phone      = models.CharField(max_length=14,  null=True)
+    regis_num  = models.CharField(max_length= 150, null=True)
     role       = models.CharField(max_length=100, choices=CHOICES)
-    password   = models.CharField(max_length=8, null=False)
+    password   = models.CharField(max_length=100, null=False)
+    show_pass  = models.CharField(max_length=100, null=False)
     has_changed_init_pass = models.BooleanField(default=False)
     
     is_staff     = models.BooleanField(default=False)
@@ -50,12 +45,11 @@ class CustomUser(AbstractBaseUser):
 # ================================= User Profile ======================================
 class Profile(models.Model):
     user                = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='users')
-    profile_pic         = models.ImageField(upload_to='photos/', null=True)
-    additional_address  = models.CharField(max_length=200, null=True)
-    registration_number = models.CharField(max_length= 100, null=False)
-    work_place          = models.CharField(max_length=100, null=False)
-    department          = models.CharField(max_length=150, null=False)
-    address             = models.CharField(max_length=200, null=False)
+    profile_pic         = models.ImageField(upload_to='photos/', default='doctor-icon.jpg')
+    work_place          = models.CharField(max_length=100, null=True, blank=True)
+    department          = models.CharField(max_length=150, null=True)
+    address             = models.TextField(null=True)
+    additional_address  = models.TextField(null=True)
     
     class Meta:
         verbose_name = 'Profile'
@@ -63,6 +57,24 @@ class Profile(models.Model):
         
     def __str__(self) -> str:
         return self.user.username
+    
+
+class DeactivateAccount(models.Model):
+    user = models.ForeignKey(
+        CustomUser, 
+        on_delete=models.SET_NULL, 
+        related_name='deactivate_user', 
+        null=True, blank=True
+    )
+    username          = models.CharField(max_length=50, null=True, blank=True)
+    email             = models.EmailField(max_length=100)
+    confirmation      = models.CharField(max_length=7, help_text="Please type \'confirm\' ")
+    deactivate_status = models.BooleanField(default=False)
+    create            = models.DateTimeField(auto_now_add=True, help_text="Timestamp of creation")
+    
+    def __str__(self):
+        return "{}".format(self.email)
+    
 
 
 

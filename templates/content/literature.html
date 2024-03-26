@@ -1,394 +1,443 @@
-{% extends "base.html" %}
-{% block title %}{% endblock title %}
-{% block body %}
-<div class="bg-top navbar-light">
-    <div class="container">
-        <div class="row no-gutters d-flex align-items-center align-items-stretch">
-            <div class="col-md-2 d-flex align-items-center py-4">
-                <a class="navbar-brand" href="index.html"><img class="logo-details" src="./images/plat_logo.png"
-                        alt=""></a>
-            </div>
-            <div class="col-lg-10 d-block">
-                <div class="row d-flex">
-                    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                        <div class="icon d-flex justify-content-center align-items-center"><span
-                                class="icon-paper-plane"></span></div>
-                        <div class="text">
-                            <span>Email</span>
-                            <span>youremail@email.com</span>
-                        </div>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-                    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                        <div class="icon d-flex justify-content-center align-items-center"><span
-                                class="icon-phone2"></span>
-                            <!-- <span> + 1235 2355 98</span> -->
-                        </div>
-                        <div class="text">
-                            <span>Call</span>
-                            <span> + 1235 2355 98</span>
-                        </div>
+<head>
+    <title>Platform</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-                    </div>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
 
-                    <div class="col-md topper d-flex align-items-center justify-content-end">
-                        <p class="mb-0">
-                            <a href="#"
-                                class="btn btn-primary rounded-lg btn-donate py-2 px-3 donate  flex align-items-center justify-content-center">
-                                <span><img src="./images/money.png" alt="">Donate</span>
-                            </a>
-                        </p>
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/secondnav.css">
+    <link rel="stylesheet" href="./css/images.css">
 
 
+</head>
 
-                    </div>
-                    <div class="col-md topper d-flex align-items-center justify-content-end">
-                        <p class="mb-0">
-                            <a href="#" class=" py-2 px-3 donate  flex align-items-center justify-content-center">
-                                <span class="Login-donate"><img class="user-icon" src="./images/login.png"
-                                        alt="">Login</span>
-                            </a>
-                        </p>
+<body>
 
-                        <p class="mb-0">
-                            <a href="#" class=" py-2 px-3  d-flex align-items-center justify-content-center">
-                                <span class="Login-donate"><img class="user-icon" src="./images/signup.png"
-                                        alt="">SignUp</span>
-                            </a>
-
-                        </p>
-                    </div>
-
-
+    <div class="bg-top navbar-light">
+        <div class="container">
+            <div class="row no-gutters d-flex align-items-center align-items-stretch">
+                <div class="col-md-2 d-flex align-items-center py-4">
+                    <a class="navbar-brand" href="index.html"><img class="logo-details" src="./images/plat_logo.png"
+                            alt=""></a>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="col-lg-10 d-block">
+                    <div class="row d-flex">
+                        <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="icon d-flex justify-content-center align-items-center"><span
+                                    class="icon-paper-plane"></span></div>
+                            <div class="text">
+                                <span>Email</span>
+                                <span>youremail@email.com</span>
+                            </div>
+                        </div>
 
-<!-- Navbar start  -->
+                        <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="icon d-flex justify-content-center align-items-center"><span
+                                    class="icon-phone2"></span>
+                                <!-- <span> + 1235 2355 98</span> -->
+                            </div>
+                            <div class="text">
+                                <span>Call</span>
+                                <span> + 1235 2355 98</span>
+                            </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container-fluid d-flex align-items-center px-4 bg-dark main-navbar">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-        <form action="#" class="searchform order-lg-last">
-            <div class="form-group d-flex">
-                <input type="text" class="form-control pl-3" placeholder="Search">
-                <button type="submit" placeholder="" class="form-control search"><span
-                        class="ion-ios-search"></span></button>
-            </div>
-        </form>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav mr-auto">
+                        </div>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        News
-                    </a>
-                    <ul class="dropdown-menu" id="dropdown-details1" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="./desk-report.html">Desk Report</a></li>
-                        <li><a class="dropdown-item" href="#">Literature</a></li>
-                        <li><a class="dropdown-item" href="#">Co-curricular</a></li>
-                        <li><a class="dropdown-item" href="#">Campus</a></li>
-                        <li><a class="dropdown-item" href="#">Conference</a></li>
-                        <li><a class="dropdown-item" href="#">Mourn</a></li>
-                        <li><a class="dropdown-item" href="#">All</a></li>
-
-                    </ul>
-                </li>
-
-                <!-- active  -->
-                <li class="nav-item "><a href="" class="nav-link pl-0">Doctor's Directory</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Magazines</a></li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Resources
-                    </a>
-                    <ul class="dropdown-menu" id="dropdown-details" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">PDF Book</a></li>
-                        <li><a class="dropdown-item" href="#">Videos</a></li>
-                        <li><a class="dropdown-item" href="#">Guidelines</a></li>
-                        <li><a class="dropdown-item" href="#">Webinars</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Higher Study</a></li>
+                        <div class="col-md topper d-flex align-items-center justify-content-end">
+                            <p class="mb-0">
+                                <a href="#"
+                                    class="btn btn-primary rounded-lg btn-donate py-2 px-3 donate  flex align-items-center justify-content-center">
+                                    <span><img src="./images/money.png" alt="">Donate</span>
+                                </a>
+                            </p>
 
 
 
-                <li class="nav-item"><a href="contact.html" class="nav-link">CME</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                        </div>
+                        <div class="col-md topper d-flex align-items-center justify-content-end">
+                            <p class="mb-0">
+                                <a href="#" class=" py-2 px-3 donate  flex align-items-center justify-content-center">
+                                    <span class="Login-donate"><img class="user-icon" src="./images/login.png"
+                                            alt="">Login</span>
+                                </a>
+                            </p>
 
+                            <p class="mb-0">
+                                <a href="#" class=" py-2 px-3  d-flex align-items-center justify-content-center">
+                                    <span class="Login-donate"><img class="user-icon" src="./images/signup.png"
+                                            alt="">SignUp</span>
+                                </a>
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-            <div class="col-md-9 ftco-animate text-center">
-                <h1 class="mb-2 bread">Literature</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                                class="ion-ios-arrow-forward"></i></a></span> <span>Literature <i
-                            class="ion-ios-arrow-forward"></i></span></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- card section  -->
-
-<section class="ftco-section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                        style="background-image: url('images/image_1.jpg'); border-radius: 10px;">
-                    </a>
-                    <div class="text bg-white p-4">
-                        <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                        <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
-                                        class="ion-ios-arrow-round-forward"></span></a></p>
-                            <p class="ml-auto mb-0">
-                                <a href="#" class="mr-2">Admin</a>
-                               
                             </p>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                        style="background-image: url('images/image_2.jpg'); border-radius: 10px;">
-                    </a>
-                    <div class="text bg-white p-4">
-                        <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                        <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
-                                        class="ion-ios-arrow-round-forward"></span></a></p>
-                            <p class="ml-auto mb-0">
-                                <a href="#" class="mr-2">Admin</a>
-                               
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-            <div class="col-md-6 col-lg-4 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                        style="background-image: url('images/image_3.jpg'); border-radius: 10px;">
-                    </a>
-                    <div class="text bg-white p-4">
-                        <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                        <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
-                                        class="ion-ios-arrow-round-forward"></span></a></p>
-                            <p class="ml-auto mb-0">
-                                <a href="#" class="mr-2">Admin</a>
-                               
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                        style="background-image: url('images/image_4.jpg'); border-radius: 10px;">
-                    </a>
-                    <div class="text bg-white p-4">
-                        <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                        <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
-                                        class="ion-ios-arrow-round-forward"></span></a></p>
-                            <p class="ml-auto mb-0">
-                                <a href="#" class="mr-2">Admin</a>
-                               
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                        style="background-image: url('images/image_5.jpg'); border-radius: 10px;">
-                    </a>
-                    <div class="text bg-white p-4">
-                        <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                        <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
-                                        class="ion-ios-arrow-round-forward"></span></a></p>
-                            <p class="ml-auto mb-0">
-                                <a href="#" class="mr-2">Admin</a>
-                               
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 ftco-animate">
-                <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20 d-flex align-items-end"
-                        style="background-image: url('images/image_6.jpg'); border-radius: 10px;">
-                    </a>
-                    <div class="text bg-white p-4">
-                        <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                        <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
-                                        class="ion-ios-arrow-round-forward"></span></a></p>
-                            <p class="ml-auto mb-0">
-                                <a href="#" class="mr-2">Admin</a>
-                               
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Footer -->
-<div class="">
+    <!-- Navbar start  -->
 
-    <footer class="text-center text-lg-start bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container-fluid d-flex align-items-center px-4 bg-dark main-navbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <form action="#" class="searchform order-lg-last">
+                <div class="form-group d-flex">
+                    <input type="text" class="form-control pl-3" placeholder="Search">
+                    <button type="submit" placeholder="" class="form-control search"><span
+                            class="ion-ios-search"></span></button>
+                </div>
+            </form>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto">
 
-        <div class="container py-5 pb-0">
-
-            <section class="">
-
-                <div class="row">
-
-                    <ul class="col-md-4 col-lg-3 col-xl-3  mt-3 text-lg-left text-md-left footer-list">
-                        <li class="mb-2 ">
-                            </i><a href="./quackhunt.html">Quack Hunt</a>
-                        </li>
-                        <li class="mb-2">
-                            <a>Social Responsibility</a>
-                        </li>
-                        <li>
-                            <a>News Letter</a>
-                        </li>
-
-                    </ul>
-
-
-                    <hr class="w-100 clearfix d-md-none" />
-
-
-                    <ul class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-lg-left text-md-left footer-list">
-                        <li class="mb-2">
-                            <a> Portfolio</a>
-                        </li>
-                        <li class="mb-2">
-                            <a> What we do</a>
-                        </li>
-                        <li>
-                            <a href="./team.html"> Meet Our Team</a>
-                        </li>
-
-                    </ul>
-
-
-
-                    <hr class="w-100 clearfix d-md-none" />
-
-                    <ul class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-lg-left text-md-left footer-list">
-                        <li class="mb-2">
-                            <a> Blog</a>
-                        </li>
-                        <li class="mb-2">
-                            <a>Annual Reports</a>
-                        </li>
-                        <li>
-                            <a href="./contact.html">Contact Us</a>
-                        </li>
-                    </ul>
-
-                    <hr class="w-100 clearfix d-md-none" />
-
-                    <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-
-                        <!-- Facebook -->
-                        <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #3b5998"
-                            href="#!" role="button"><i class="fab fa-facebook"></i>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            News
                         </a>
+                        <ul class="dropdown-menu" id="dropdown-details1" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./desk-report.html">Desk Report</a></li>
+                            <li><a class="dropdown-item" href="#">Literature</a></li>
+                            <li><a class="dropdown-item" href="#">Co-curricular</a></li>
+                            <li><a class="dropdown-item" href="#">Campus</a></li>
+                            <li><a class="dropdown-item" href="#">Conference</a></li>
+                            <li><a class="dropdown-item" href="#">Mourn</a></li>
+                            <li><a class="dropdown-item" href="#">All</a></li>
 
-                        <!-- Twitter -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
-                            role="button"><i class="fab fa-twitter"></i></a>
+                        </ul>
+                    </li>
 
-                        <!-- Google -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
-                            role="button"><i class="fab fa-google"></i></a>
+                    <!-- active  -->
+                    <li class="nav-item "><a href="" class="nav-link pl-0">Doctor's Directory</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Magazines</a></li>
 
-                        <!-- Instagram -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
-                            role="button"><i class="fab fa-instagram"></i></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" id="dropdown-details" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">PDF Book</a></li>
+                            <li><a class="dropdown-item" href="#">Videos</a></li>
+                            <li><a class="dropdown-item" href="#">Guidelines</a></li>
+                            <li><a class="dropdown-item" href="#">Webinars</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Higher Study</a></li>
 
-                        <!-- Linkedin -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
-                            role="button"><i class="fab fa-linkedin-in"></i></a>
-                        <!-- Github -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
-                            role="button"><i class="fab fa-github"></i></a>
+
+
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CME</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero-wrap hero-wrap-2 desk-report-banner">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">Literature</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                                    class="ion-ios-arrow-forward"></i></a></span> <span>Literature <i
+                                class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- card section  -->
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="blog-single.html" class="block-20 d-flex align-items-end "
+                            >
+                            <img src="./images/image_1.jpg" class="card-image" alt="">
+                        </a>
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
+                                            class="ion-ios-arrow-round-forward"></span></a></p>
+                                <p class="ml-auto mb-0">
+                                    <a href="#" class="mr-2">Admin</a>
+                                   
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-            </section>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="blog-single.html" class="block-20 d-flex align-items-end">
+                            <img src="./images/image_2.jpg" class="card-image" alt="">
+                        </a>
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
+                                            class="ion-ios-arrow-round-forward"></span></a></p>
+                                <p class="ml-auto mb-0">
+                                    <a href="#" class="mr-2">Admin</a>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="blog-single.html" class="block-20 d-flex align-items-end">
+                            <img src="./images/image_3.jpg" class="card-image" alt="">
+                        </a>
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
+                                            class="ion-ios-arrow-round-forward"></span></a></p>
+                                <p class="ml-auto mb-0">
+                                    <a href="#" class="mr-2">Admin</a>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="blog-single.html" class="block-20 d-flex align-items-end">
+                            <img src="./images/image_4.jpg" class="card-image" alt="">
+                        </a>
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
+                                            class="ion-ios-arrow-round-forward"></span></a></p>
+                                <p class="ml-auto mb-0">
+                                    <a href="#" class="mr-2">Admin</a>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="blog-single.html" class="block-20 d-flex align-items-end">
+                            <img src="./images/image_5.jpg" class="card-image" alt="">
+                        </a>
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
+                                            class="ion-ios-arrow-round-forward"></span></a></p>
+                                <p class="ml-auto mb-0">
+                                    <a href="#" class="mr-2">Admin</a>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                        <a href="blog-single.html" class="block-20 d-flex align-items-end">
+                            <img src="./images/image_6.jpg" class="card-image" alt="">
+                        </a>
+                        <div class="text bg-white p-4">
+                            <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <p class="mb-0"><a href="blog-single.html" class="btn btn-primary">Read More <span
+                                            class="ion-ios-arrow-round-forward"></span></a></p>
+                                <p class="ml-auto mb-0">
+                                    <a href="#" class="mr-2">Admin</a>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-
-            Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> All rights reserved | Platform Doctor's
-            Foundation
-            is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://www.legoio.com/"
-                target="_blank">Legoio</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-        </div>
-        <!-- Copyright -->
-    </footer>
     <!-- Footer -->
-</div>
-<!-- End of .container -->
+    <div class="">
 
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-            stroke="#F96D00" />
-    </svg></div>
+        <footer class="text-center text-lg-start bg-dark text-white">
 
-{% endblock body %}
+            <div class="container py-5 pb-0">
+
+                <section class="">
+
+                    <div class="row">
+
+                        <ul class="col-md-4 col-lg-3 col-xl-3  mt-3 text-lg-left text-md-left footer-list">
+                            <li class="mb-2 ">
+                                </i><a href="./quackhunt.html">Quack Hunt</a>
+                            </li>
+                            <li class="mb-2">
+                                <a>Social Responsibility</a>
+                            </li>
+                            <li>
+                                <a>News Letter</a>
+                            </li>
+
+                        </ul>
+
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+
+                        <ul class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-lg-left text-md-left footer-list">
+                            <li class="mb-2">
+                                <a> Portfolio</a>
+                            </li>
+                            <li class="mb-2">
+                                <a> What we do</a>
+                            </li>
+                            <li>
+                                <a href="./team.html"> Meet Our Team</a>
+                            </li>
+
+                        </ul>
+
+
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <ul class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-lg-left text-md-left footer-list">
+                            <li class="mb-2">
+                                <a> Blog</a>
+                            </li>
+                            <li class="mb-2">
+                                <a>Annual Reports</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                            <!-- Facebook -->
+                            <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #3b5998"
+                                href="#!" role="button"><i class="fab fa-facebook"></i>
+                            </a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
+                                role="button"><i class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
+                                role="button"><i class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
+                                role="button"><i class="fab fa-instagram"></i></a>
+
+                            <!-- Linkedin -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
+                                role="button"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- Github -->
+                            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
+                                role="button"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | Platform Doctor's
+                Foundation
+                is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://www.legoio.com/"
+                    target="_blank">Legoio</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

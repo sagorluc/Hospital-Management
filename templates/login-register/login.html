@@ -1,0 +1,106 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}login{% endblock title %}
+{% block body %}
+
+ <!-- Messages -->
+ <br>
+ <div style="width: 53%; margin: auto;">
+	{% if messages %}
+	<div class="messages">
+		{% for message in messages %}
+		<div class="alert {% if message.tags == 'error' %}error{% endif %}">
+			{{ message }}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+   </div>
+
+    <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+        <div class="card card0 border-0">
+            <div class="row d-flex">
+                <div class="col-lg-6">
+                    <div class="card1 pb-5">
+                        <div class="row px-3  mt-4 mb-5 border-line">
+                            <img src="{% static "./images/login-image.jpg" %}" class="login-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                   
+                    <div class="card2 card border-0 px-4 py-5">
+                        <h2 class="text-center font-weight-bold">Please Login </h2>
+
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="row px-3">
+                                <label for="username" class="mb-1"><h6 class="mb-0 text-sm">Username</h6></label>
+                                <input class="mb-4" type="text" name="username" id="username" placeholder="Enter your username">
+                            </div>
+                            <div class="row px-3">
+                                <label for="password" class="mb-1"><h6 class="mb-0 text-sm">Password</h6></label>
+                                <input type="password" name="password" id="password" placeholder="Enter password">
+                            </div>
+                            <div class="row px-3 mb-4">
+
+                                <!--
+                                <div class="custom-control custom-checkbox custom-control-inline">                                    
+                                    <input class="custom-control-input" type="checkbox" name="password" id="showPasswordCheckbox" onclick="showPassword()"> 
+                                    <label for="showPasswordCheckbox" class="custom-control-label text-sm">Show Password</label>
+                                    
+
+                                </div>
+                                -->
+                                
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> 
+                                    <label for="chk1" class="custom-control-label text-sm">Remember me</label>
+                                </div>
+
+                                <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
+
+                            </div>
+                            <div class="row mb-3 px-3">
+                                {% comment %} <a href="{% url "home" %}" class="text-center button-login text-white">Login</a> {% endcomment %}
+                                <button type="submit" class="text-center button-login text-white">Login</button> <br><br>
+                            </div>
+
+                        </form>
+                        
+                        <!--
+                            <div class="row mb-4 px-3">
+                                <small class="font-weight-bold">Don't have an account? <a href="{% url "register" %}" class="text-danger ">Register</a></small>
+                            </div>
+                       
+                        <div class="row px-3 mb-4">
+                            <div class="line"></div>
+                            <small class="or text-center">Or</small>
+                            <div class="line"></div>
+                        </div>
+                        <h6 class="mb-3 text-center">Sign in with</h6>
+                        <div class="row mb-4 px-3 mx-auto">
+                            
+                            <div class="facebook text-center mr-3">
+                                <a href="#" class="fa fa-facebook"></a>
+                            </div>
+                            <div class="google text-center mr-3">
+                                <a href="#" class="fa fa-google"></a>
+                            </div>
+                            <div class="facebook text-center mr-3">
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </div>
+                            <div class="twitter text-center mr-3"><div class="fa fa-twitter"></div></div>
+                        </div>
+                       -->
+                       
+                    </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+{% endblock body %}

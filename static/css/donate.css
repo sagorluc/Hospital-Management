@@ -1,0 +1,19 @@
+.donate-title {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bank-logo {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.bank-card {
+    display: flex;
+    border: 1px solid #17254E;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}

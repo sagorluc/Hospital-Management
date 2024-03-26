@@ -9,18 +9,49 @@ ul li {
 
     text-decoration: none;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .social-icon {
     text-decoration: none;
+    width: 30px;
+    gap: 5px;
 }
 
-.footer-list li a{
+.footer-list li a {
     list-style: none;
     color: white;
+
+}
+
+.footer-list a:hover {
+    text-decoration: none;
+    color: #23ADF1;
+}
+
+.btn-subscribe{
+    background-color:#23ADF1 ;
+    color: #fff;
+}
+
+.btn-subscribe:hover {
+    border:1px solid white;
+    color: #0D1128;
     
 }
 
-.footer-list a:hover{
-    text-decoration: none;
+.footer-content{
+    margin-top: 100px;
+}
+
+.copyright-text{
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+
+    .footer-main {
+        height: 500px;
+
+    }
 }

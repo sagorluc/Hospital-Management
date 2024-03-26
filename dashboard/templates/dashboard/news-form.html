@@ -1,0 +1,56 @@
+{% extends "../base_dashboard.html" %}
+{% load static %}
+{% block title %}news-form{% endblock title %}
+{% block body %}
+
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center py-3">
+                    <h4>Please Write The Information</h4>
+                </div>
+            </div>
+
+            <form class="container border p-3">
+                <div class="form-group mb-3 ">
+                    <label for="exampleInputEmail1">Title:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1"
+                        placeholder="Please write the title">
+                </div>
+
+                <!-- <div class="row">
+                    <div class="form-group mb-3 col-md-6">
+                        <label for="exampleInputPassword1">Date:</label>
+                        <input type="date" class="form-control" id="exampleInputPassword1" placeholder="">
+                    </div>
+                    <div class="form-group mb-3 col-md-6">
+                        <label for="exampleInputPassword1">Author:</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1"
+                            placeholder="Write Author name">
+                    </div>
+                </div> -->
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Paragraph:</label>
+                    <textarea class="form-control" name="paragraph" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Write your text here"></textarea>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <label for="formFileLg" class="form-label">File Input:</label>
+                    <input class="form-control form-control" id="formFileLg" type="file" multiple />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <a type="submit" class="btn btn-block button-submit accordion-header ">Publish</a>
+                    </div>
+                    <div class="col-md-6 col-sm-10 ">
+                        <a type="submit" class="btn btn-default button-submit">Save as Draft</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+{% endblock body%}
