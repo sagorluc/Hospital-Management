@@ -1,0 +1,179 @@
+{% extends "../base_dashboard.html" %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block body %}
+
+<style>
+    .disabled-text {
+        background-color: #f0f0f0; /* Background color */
+        color: #555; /* Text color */
+        border: 1px solid #ddd; /* Border */
+        padding: 8px; /* Padding */
+        border-radius: 4px; /* Border radius */
+    }
+    
+</style>
+
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center py-3">
+                    <h4>Profile Data</h4>
+                </div>
+                <div class="col-md-12 text-center py-3">
+                    <a style="color:red; text-decoration:none;" href="{% url "deactivate_account" %}">Delete account</a>
+                </div>
+            </div>
+
+             <!-- Messages -->
+            <br>
+            <div style="width: 23%; margin: auto;">
+                {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                    <div class="alert {% if message.tags == 'error' %}error{% endif %}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- <h2>User section</h2> -->
+                    <div class="user-image text-center">
+                        <img style="width:80px; height: 80px;" class="mb-2" src="{{profile.profile_pic.url}}" alt=""> 
+                        <!-- <img style="width:50px; height: 50px;" class="mb-2" src="{% static "./images/staff-1.jpg" %}" alt=""> -->
+                        <div class="d-flex justify-content-center align-content-center gap-3">
+                            <p style="color:green;">{{request.user}}</p>
+                            <i class="bi bi-pencil-square"></i>
+
+                        </div>
+                    </div>
+                    <div class=" row">
+                        <label for="inputPassword" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Username</label>
+                        <div class="input-group w-50">
+                            {% if user.username %}
+                            <p class="disabled-text">{{user.username}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Full Name</label>
+                        <div class="input-group w-50 ">
+                            {% if user.frist_name and user.last_name %}
+                                <p class="disabled-text">{{user.frist_name}} {{user.last_name}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Email</label>
+                        <div class="input-group w-50 ">
+                            {% if user.email %}
+                                <p class="disabled-text">{{user.email}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Phone</label>
+                        <div class="input-group w-50 ">
+                            {% if user.phone %}
+                                <p class="disabled-text">{{user.phone}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Reg: Number</label>
+                        <div class="input-group w-50 ">
+                            {% if user.regis_num %}
+                                <p class="disabled-text">{{user.regis_num}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right side content -->
+                <div class="col-md-6" style="margin-top:100px;">
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Work Place
+                        </label>
+                        <div class="input-group w-50 ">
+                            {% if profile.work_place %}
+                                <p class="disabled-text">{{profile.work_place}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Department
+                        </label>
+                        <div class="input-group w-50 ">
+                            {% if profile.department %}
+                                <p class="disabled-text">{{profile.department}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Address
+                        </label>
+                        <div class="input-group w-50 ">
+                            {% if profile.address %}
+                                <p class="disabled-text">{{profile.address}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Address line 2</label>
+                        <div class="input-group w-50 ">
+                            {% if profile.additional_address %}
+                                <p class="disabled-text">{{profile.additional_address}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="disabledTextInput" class="col-sm-4 col-md-6 col-lg-4 col-form-label ">Role</label>
+                        <div class="input-group w-50 ">
+                            {% if user.role %}
+                                <p class="disabled-text">{{user.role}}</p>
+                            {% else %}
+                                <p style="color: red;" class="disabled-text">Null</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <a href="{% url "update_profile" %}" class="btn btn-primary w-50 text-center mb-5 save-btn">Editing</a>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock body %}

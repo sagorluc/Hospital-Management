@@ -1,0 +1,60 @@
+.banner-image1{
+    background-image: url(../images/platform-bg.jpg);
+    width: 100%;
+}
+
+.banner-image2{
+    background-image: url(../images/platform-bg.jpg);
+    width: 100%;
+}
+
+/* .about-image1{
+    background-image: url(../images/bg_3.jpg);
+} */
+
+.about-image2{
+    background-image: url(../images/about-2.jpg);
+}
+
+.testimony-image1{
+    background-image: url(../images/teacher-1.jpg);
+}
+
+.testimony-image2{
+    background-image: url(../images/teacher-2.jpg);
+}
+
+.testimony-image3{
+    background-image: url(../images/teacher-3.jpg);
+}
+
+.testimony-image4{
+    background-image: url(../images/teacher-4.jpg);
+}
+
+.testimony-image5{
+    background-image: url(../images/teacher-5.jpg);
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.desk-report-banner{
+    background-image: url(../images/bg_1.jpg);
+}
+
+.quack-banner{
+    background-image: url(../images/doctor-banner1.jpg);
+}
+
+.blog-image{
+    background-image: url(../images/bg_1.jpg);
+}
+
+.donate-banner{
+    background-image: url(../images/donate-3.jpg);
+}

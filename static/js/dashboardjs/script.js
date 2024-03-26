@@ -47,14 +47,3 @@ $(document).ready(function () {
 });
 
 
-// JavaScript code to handle click event and update dashboard content
-document.getElementById("campusLink").addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent default anchor behavior
-
-  // Update dashboard content with Campus details
-  document.getElementById("dashboardContent").innerHTML = "<h2>Campus Details</h2><p>This is where the Campus details will be displayed.</p>";
-
-  // Optionally, you can close the offcanvas menu programmatically
-  var offcanvas = new bootstrap.Offcanvas(document.getElementById("sidebar"));
-  offcanvas.hide();
-});

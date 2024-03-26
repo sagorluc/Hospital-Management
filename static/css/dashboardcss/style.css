@@ -1,39 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 body,
 button {
   font-family: "Inter", sans-serif;
 }
+
 :root {
   --offcanvas-width: 270px;
   --topNavbarHeight: 56px;
 }
-.navbar-details{
+
+.navbar-details {
   background-color: #0D1128;
 }
+
 .sidebar-nav {
   width: var(--offcanvas-width);
 }
+
 .sidebar-link {
   display: flex;
   align-items: center;
 }
+
 .sidebar-link .right-icon {
   display: inline-flex;
 }
+
 .sidebar-link[aria-expanded="true"] .right-icon {
   transform: rotate(180deg);
 }
+
+td a {
+  text-decoration: none;
+}
+
+.add-button {
+  padding: 10px 30px 10px 30px;
+  background-color: #0D1128;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #0d1128d8;
+}
+
+.card-header {
+  background-color: white;
+  text-decoration: none;
+
+}
+
+.button-submit {
+  padding: 10px 30px 10px 30px;
+  background-color: #0D1128;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+.button-submit:hover {
+  color: white;
+  background-color: #0d1128d8;
+
+}
+
+/* Profile  */
+.user-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+
+}
+
+.save-btn {
+  background-color: #0D1128;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #23ADF1;
+  color: white;
+}
+
+.text-title{
+  color: #0D1128;
+  font-weight: 500;
+}
+
+
+/* Change Password */
+.card-details {
+  background-color: #DDE0E3;
+  box-shadow: 0 8px 8px -4px lightblue;
+  width: 100%;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.width-details {
+  width: 50%;
+}
+
+
+@media (max-width: 576px) {
+
+  .width-details {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+}
+
+
 @media (min-width: 992px) {
   body {
     overflow: auto !important;
   }
+
   main {
     margin-left: var(--offcanvas-width);
   }
+
   /* this is to remove the backdrop */
   .offcanvas-backdrop::before {
     display: none;
   }
+
   .sidebar-nav {
     -webkit-transform: none;
     transform: none;

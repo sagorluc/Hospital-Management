@@ -1,0 +1,171 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}signup{% endblock title %}
+{% block body %}
+
+ <!-- Messages -->
+ <br>
+ <div style="width: 53%; margin: auto;">
+	{% if messages %}
+	<div class="messages">
+		{% for message in messages %}
+		<div class="alert {% if message.tags == 'error' %}error{% endif %}">
+			{{ message }}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+   </div>
+
+ <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                    <div class="row px-3  mt-4 mb-5 border-line">
+                        <img src="{% static "./images/login-image.jpg" %}" class="login-image">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-6">
+                
+                    <div class="card2 card border-0 px-4 py-5">
+                        <h2 class="text-center font-weight-bold mb-4">Create credential for new member</h2>
+
+                     {% if request.user.is_authenticated and request.user.is_superuser %}
+                     <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">First Name: </h6>
+                                </label>
+                                <input class="mb-1" type="text" name="frist_name" placeholder="Enter Your First Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Last Name: </h6>
+                                </label>
+                                <input class="mb-1" type="text" name="last_name" placeholder="Enter Your Last Name">
+                            </div>
+                        </div>
+
+                        <div class="row px-3">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">User Name:</h6>
+                            </label>
+                            <input type="text" name="username" placeholder="Enter User Name">
+                        </div>
+                        <div class="row px-3">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Email:</h6>
+                            </label>
+                            <input type="email" name="email" placeholder="Enter Your Email">
+                        </div>
+                        <div class="row px-3">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Phone Number:</h6>
+                            </label>
+                            <input type="number" name="phone" placeholder="Enter Your Phone Number">
+                        </div>
+
+                        <div class="row px-3">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Registration Number:</h6>
+                            </label>
+                            <input type="number" name="registration_number" placeholder="Enter Your Registration Number">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Role:</h6>
+                            </label>
+                                                       
+                            <select name="role" class="form-select w-100 p-2" id="inputGroupSelect01">
+                                <option value="" disabled selected>Select Role</option>
+                                {% for choice in choices %}
+                                    <option value="{{ choice.0 }}">{{ choice.0 }}</option>
+                                {% endfor %}
+                            </select>
+                           
+                        </div>
+
+                        <!--
+                        <div class="input-group mb-3">
+                            
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Role: </h6>
+                            </label>
+                            <select class="form-select w-100 p-2" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five</option>
+                            </select>
+                        </div>
+                        -->
+
+                        <div class="row px-3">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Password</h6>
+                            </label>
+                            <input type="password" name="password" placeholder="Enter password">
+                        </div>
+                        <div class="row px-3">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Repeat Password</h6>
+                            </label>
+                            <input type="password" name="repeat_password" placeholder="Enter password">
+                        </div>
+                        <div class="row px-3 mb-4">
+                
+                        </div>
+                        <div class="row mb-3 px-3">
+                            <!-- <a class="text-center button-login text-white">SignUp</a> -->
+                            <button type="submit" class="text-center button-login text-white">Create</button>
+                        </div>
+                     </form>
+                     <!--
+                        <div class="row mb-4 px-3">
+                            <small class="font-weight-bold">Already have an account? <a
+                                    class="text-danger ">Login</a></small>
+                        </div>
+                     
+                        <div class="row px-3 mb-4">
+                            <div class="line"></div>
+                            <small class="or text-center">Or</small>
+                            <div class="line"></div>
+                        </div>
+                        <h6 class="mb-3 text-center">Sign in with</h6>
+                        <div class="row mb-4 px-3 mx-auto">
+
+                            <div class="facebook text-center mr-3">
+                                <a href="" class="fa fa-facebook"></a>
+                            </div>
+                            <div class="google text-center mr-3">
+                                <a href="" class="fa fa-google"></a>
+                            </div>
+                            <div class="facebook text-center mr-3">
+                                <a href="" class="fa fa-linkedin"></a>
+                            </div>
+                            <div class="twitter text-center mr-3">
+                                <div class="fa fa-twitter"></div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                {% else %}
+                <h4 style="color: red;">Not allwoed for normal user</h4>
+               {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+ </div>
+{% endblock body %}

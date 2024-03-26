@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
+    'dashboard',
     'crispy_forms',
     'crispy_bootstrap5',
     
@@ -123,7 +124,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
 
 # Media
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR /  'media'
 
 # Default primary key field type

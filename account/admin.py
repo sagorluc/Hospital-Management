@@ -1,5 +1,6 @@
 from django.contrib import admin
-from account.models import CustomUser, Profile, UserPassword
+from account.models import CustomUser, Profile
+from account.models import DeactivateAccount
 # from core.models import CardContent
 
 # Register your models here.
@@ -9,18 +10,18 @@ class CustomUserAdmin(admin.ModelAdmin):
     
     
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['id', 'registration_number', 'work_place', 'department']
+    list_display = ['id',  'work_place', 'department']
     ordering     = ['-id']
     
+class DeactivateAccountAdmin(admin.ModelAdmin):
+    list_display = ['id', 'user', 'email', 'confirmation', 'deactivate_status']
+    ordering = ['-id']
     
-class UserPasswordAdmin(admin.ModelAdmin):
-    list_display = ['id', 'username', 'see_password', 'user_id']
-    ordering     = ['-id']
-
 
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(Profile, ProfileAdmin)
-admin.site.register(UserPassword, UserPasswordAdmin)
+admin.site.register(DeactivateAccount, DeactivateAccountAdmin)
+
 
 
 

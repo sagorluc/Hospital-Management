@@ -11,13 +11,12 @@ from django.utils.safestring import mark_safe
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
-from account.models import CustomUser, UserPassword
+from account.models import CustomUser
 from account.tokens import account_activation_token
 
 def activateEmail(request, user, to_email):
     
     user_instance = CustomUser.objects.get(pk=user.id)
-    user_pass = UserPassword.objects.get(user_id=user_instance.id)
     
     if to_email is None:
         messages.error(request, "Email address is missing.")
@@ -30,7 +29,7 @@ def activateEmail(request, user, to_email):
         'frist_name': user_instance.frist_name,
         'last_name' : user_instance.last_name,
         'email'     : to_email,
-        'password'  : user_pass.see_password,
+        'password'  : user_instance.show_pass,
         'domain'    : get_current_site(request).domain,
         'uid'       : urlsafe_base64_encode(force_bytes(user_instance.pk)),
         'token'     : account_activation_token.make_token(user),

@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}home{% endblock title %}
+{% block body %}
+
+ <!-- Messages -->
+  <br>
+  <div style="width: 53%; margin: auto;">
+	{% if messages %}
+	<div class="messages">
+		{% for message in messages %}
+		<div class="alert {% if message.tags == 'error' %}error{% endif %}">
+			{{ message }}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+   </div>
+
+	<div class="d-lg-flex d-md-flex justify-content-center mb-3 ">
+		<div class=" col-md-8 w-100">
+			<section class="home-slider owl-carousel">
+				<div class="slider-item banner-image1" >
+					<div class="overlay"></div>
+					<div class="container">
+						<div class="row no-gutters slider-text align-items-center justify-content-start"
+							data-scrollax-parent="true">
+							<div class="col-md-6 ftco-animate">
+								<h1 class="mb-4">Education Needs Complete Solution</h1>
+								<p>A small river named Duden flows by their place and supplies it with the necessary
+									regelialia.
+								</p>
+								<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slider-item banner-image2">
+					<div class="overlay"></div>
+					<div class="container">
+						<div class="row no-gutters slider-text align-items-center justify-content-start"
+							data-scrollax-parent="true">
+							<div class="col-md-6 ftco-animate">
+								<h1 class="mb-4">University, College School Education</h1>
+								<p>A small river named Duden flows by their place and supplies it with the necessary
+									regelialia.
+								</p>
+								<p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Right side card -->
+
+		<div class=" col-md-4">
+			<div class="card-details">
+				<div>
+					<img class="image-details mb-3 mt-5" src="{% static "./images/adds.jpg" %}" alt="">
+					<div class="flex justify-content-center align-items-center">
+
+						<a class="btn btn-primary px-5 py-3 mt-3 button-detail" href="./gallery.html"><img
+								src="{% static "./images/camera.png" %}" alt="">Gallery/Media
+						</a>
+
+						<a class="btn btn-primary px-5 py-3 mt-3 button-detail mb-5" href="./gallery.html"><img
+								src="{% static "./images/schedule.png" %}" alt="">Upcoming Events</a>
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About  -->
+	<section class="ftco-section ftco-counter img about-image1" id="section-counter" 
+		data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2 d-flex">
+				<div class="col-md-6 align-items-stretch d-flex">
+					<div class="img img-video d-flex align-items-center about-image2">
+						<div class="video justify-content-center">
+							<a href="https://vimeo.com/45830194"
+								class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<span class="ion-ios-play"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
+					<h3 class="mb-4 text-white font-weight-bold">Platform Doctor's Foundation</h3>
+					<p>Platform is a dedicated non-profit organization comprising passionate Bangladeshi doctors and aspiring medical and dental students, united in their commitment to safeguarding the rights of healthcare professionals and providing invaluable support and guidance across various facets of their careers. Founded on September 26, 2013, Platform embodies a collective effort to foster a thriving healthcare ecosystem in Bangladesh by illuminating the bright facets, promising prospects, and abundant opportunities within the health sector.</p>
+					
+				</div>
+			</div>
+			<div class="row d-md-flex align-items-center justify-content-center">
+				<div class="col-lg-12">
+					<div class="row d-md-flex align-items-center">
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon"><span class="flaticon-doctor"></span></div>
+								<div class="text">
+									<strong class="number" data-number="18">170</strong>
+									<span>Doctors</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon"><span class="flaticon-doctor"></span></div>
+								<div class="text">
+									<strong class="number" data-number="401">0</strong>
+									<span>Students</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon"><span class="flaticon-doctor"></span></div>
+								<div class="text">
+									<strong class="number" data-number="30">0</strong>
+									<span>Courses</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon"><span class="flaticon-doctor"></span></div>
+								<div class="text">
+									<strong class="number" data-number="50">0</strong>
+									<span>Awards Won</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- client says  -->
+	<section class="ftco-section testimony-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4">Partner Says About Us</h2>
+					<p>Separated they live in. A small river named Duden flows by their place and supplies it with the
+						necessary regelialia. It is a paradisematic country</p>
+				</div>
+			</div>
+			<div class="row ftco-animate justify-content-center">
+				<div class="col-md-12">
+					<div class="carousel-testimony owl-carousel">
+						<div class="item">
+							<div class="testimony-wrap d-flex">
+								<div class="user-img mr-4 testimony-image1" >
+								</div>
+								<div class="text ml-2">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									</span>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and
+										Consonantia, there live the blind texts.</p>
+									<p class="name">Racky Henderson</p>
+									<span class="">Father</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap d-flex">
+								<div class="user-img mr-4 testimony-image2">
+								</div>
+								<div class="text ml-2">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									</span>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and
+										Consonantia, there live the blind texts.</p>
+									<p class="name">Henry Dee</p>
+									<span class="">Mother</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap d-flex">
+								<div class="user-img mr-4 testimony-image3">
+								</div>
+								<div class="text ml-2">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									</span>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and
+										Consonantia, there live the blind texts.</p>
+									<p class="name">Mark Huff</p>
+									<span class="">Mother</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap d-flex">
+								<div class="user-img mr-4 testimony-image4">
+								</div>
+								<div class="text ml-2">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									</span>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and
+										Consonantia, there live the blind texts.</p>
+									<p class="name">Rodel Golez</p>
+									<span class="">Mother</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap d-flex">
+								<div class="user-img mr-4 testimony-image5" >
+								</div>
+								<div class="text ml-2">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									</span>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and
+										Consonantia, there live the blind texts.</p>
+									<p class="name">Ken Bosh</p>
+									<span class="">Mother</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="client-area">
+		<div class="container">
+			<h1 class="partner-title">Meet our Partners</h1>
+			<p class="partners-details">We prioritize our clients above all else by ensuring responsive communication,
+				personalized service, and exceptional support. Transparency, honesty, and value-added services are our
+				cornerstones. We actively seek feedback, recognize their contributions, and appreciate their loyalty,
+				lasting relationships.</p>
+			<hr class="hr-details">
+			<section class="logo-area slider">
+				<div class="slide">
+					<img src="{% static "./images/apple.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/amazon.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/Adidas.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/Coca-Cola.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/disney.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/nike.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/apple.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/amazon.png" %}" alt="">
+				</div>
+				<div class="slide">
+					<img src="{% static "./images/Adidas.png" %}" alt="">
+				</div>
+
+			</section>
+		</div>
+	</div>
+
+{% endblock body %}	
